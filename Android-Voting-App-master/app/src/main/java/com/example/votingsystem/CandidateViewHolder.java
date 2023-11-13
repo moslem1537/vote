@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CandidateViewHolder extends RecyclerView.ViewHolder {
     TextView cnuName;
-    TextView cnuCourse;
+    TextView cnuCity;
     TextView cnuAchievements;
     TextView cnuManifesto;
     Button btnSelect;
@@ -18,7 +18,7 @@ public class CandidateViewHolder extends RecyclerView.ViewHolder {
     public CandidateViewHolder(@NonNull View itemView) {
         super(itemView);
         cnuName = itemView.findViewById(R.id.cnuName);
-        cnuCourse = itemView.findViewById(R.id.cnuCourse);
+        cnuCity = itemView.findViewById(R.id.cnuCity);
         cnuAchievements = itemView.findViewById(R.id.cnuAchievements);
         cnuManifesto = itemView.findViewById(R.id.cnuManifesto);
         btnSelect = itemView.findViewById(R.id.btnCandidateApprove);
@@ -28,7 +28,7 @@ public class CandidateViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(Candidate candidate) {
         cnuName.setText(candidate.getName());
-        cnuCourse.setText(candidate.getCourse());
+        cnuCity.setText(candidate.getCity());
         cnuAchievements.setText(candidate.getAchievements());
         cnuManifesto.setText(candidate.getManifesto());
     }

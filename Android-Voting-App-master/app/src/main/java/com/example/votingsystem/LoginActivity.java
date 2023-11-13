@@ -9,33 +9,33 @@ import android.widget.Toast;
 import android.content.SharedPreferences;
 
 import com.example.votingsystem.databinding.ActivityLoginBinding;
-import com.example.votingsystem.databinding.ActivitySignupStudentBinding;
+import com.example.votingsystem.databinding.ActivitySignupCivilianBinding;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
 public class LoginActivity extends AppCompatActivity {
 
-    ActivityLoginBinding bindingStudent;
+    ActivityLoginBinding bindingCivilian;
     DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bindingStudent = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(bindingStudent.getRoot());
+        bindingCivilian = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(bindingCivilian.getRoot());
 
         databaseHelper = new DatabaseHelper(this);
-        bindingStudent.loginButton.setOnClickListener(new View.OnClickListener() {
+        bindingCivilian.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = bindingStudent.loginEmail.getText().toString();
-                String password = bindingStudent.loginPassword.getText().toString();
+                String email = bindingCivilian.loginEmail.getText().toString();
+                String password = bindingCivilian.loginPassword.getText().toString();
 
                 if (email.equals("") || password.equals("")) {
                     Toast.makeText(LoginActivity.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
                 } else {
                     boolean isAdmin = databaseHelper.checkAdminEmailPassword(email, password);
-                    boolean isStudent = databaseHelper.checkEmailPassword(email, password);
+                    boolean isCivilian = databaseHelper.checkEmailPassword(email, password);
 
                     if (isAdmin) {
                         Toast.makeText(LoginActivity.this, "Admin login successful", Toast.LENGTH_SHORT).show();
@@ -43,14 +43,14 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                     else {
-                        if (isStudent) {
-                            // Store the student's email in shared preferences
+                        if (isCivilian) {
+                            // Store the civilian's email in shared preferences
                             SharedPreferences.Editor editor = getSharedPreferences("MyApp", MODE_PRIVATE).edit();
-                            editor.putString("studentEmail", email);
+                            editor.putString("civilianEmail", email);
                             editor.apply();
 
-                            Toast.makeText(LoginActivity.this, "StudentActivity login successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), StudentActivity.class);
+                            Toast.makeText(LoginActivity.this, "CivilianActivity login successful", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(),CivilianActivity.class);
                             startActivity(intent);
                         }
                         else {
@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        bindingStudent.SignupRedirectText.setOnClickListener(new View.OnClickListener() {
+        bindingCivilian.SignupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -77,9 +77,9 @@ public class LoginActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which) {
                                     case 0:
-                                        // Signup as student
-                                        Intent studentSignupIntent = new Intent(LoginActivity.this, SignupActivity_Student.class);
-                                        startActivity(studentSignupIntent);
+                                        // Signup as civilian
+                                        Intent civilianSignupIntent = new Intent(LoginActivity.this, SignupActivity_Civilian.class);
+                                        startActivity(civilianSignupIntent);
                                         break;
                                     case 1:
                                         // Signup as candidate

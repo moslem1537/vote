@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:orientation="vertical"
+    android:orientation="vertical"
     android:background="@drawable/img_1"
-    tools:context=".SignupActivity_Student">
+    tools:context=".SignupActivity_Civilian">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
 
 
             <EditText
-                android:id="@+id/signup_NameStudent"
+                android:id="@+id/signup_NameCivilian"
                 android:layout_width="350dp"
 
                 android:layout_height="50dp"
@@ -64,7 +64,7 @@
 
             <!-- Name field -->
             <EditText
-                android:id="@+id/signup_emailStudent"
+                android:id="@+id/signup_emailCivilian"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="30dp"
@@ -78,7 +78,7 @@
 
 
             <EditText
-                android:id="@+id/signup_passwordStudent"
+                android:id="@+id/signup_passwordCivilian"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
 
@@ -92,7 +92,7 @@
                 android:textColorHint="#686565" />
 
             <EditText
-                android:id="@+id/signup_StudentConfirm"
+                android:id="@+id/signup_CivilianConfirm"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
 
@@ -106,14 +106,14 @@
                 android:textColorHint="#686565" />
 
             <Spinner
-                android:id="@+id/signup_CourseStudent"
+                android:id="@+id/signup_CityCivilian"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
 
                 android:layout_marginTop="30dp"
                 android:background="@drawable/lavender_border"
                 android:drawablePadding="8dp"
-                android:hint="Course"
+                android:hint="City"
                 android:paddingLeft="12dp"
 
 
@@ -123,7 +123,7 @@
 
 
             <Button
-                android:id="@+id/signup_ButtonStudent"
+                android:id="@+id/signup_ButtonCivilian"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"

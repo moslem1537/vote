@@ -86,11 +86,11 @@ public class DashboardActivity extends AppCompatActivity {
         for (Map.Entry<String, HashMap<String, Integer>> entry : candidateVotes.entrySet()) {
             String name = entry.getKey();
             for (Map.Entry<String, Integer> innerEntry : entry.getValue().entrySet()) {
-                String course = innerEntry.getKey();
+                String city = innerEntry.getKey();
                 int voteCount = innerEntry.getValue();
 
                 entries.add(new BarEntry(i, voteCount));
-                labels.add(name + getShortFacultyName(course));
+                labels.add(name + getShortFacultyName(city));
                 i++;
             }
         }

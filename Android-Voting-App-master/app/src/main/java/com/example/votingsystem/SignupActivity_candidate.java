@@ -34,18 +34,18 @@ public class SignupActivity_candidate extends AppCompatActivity {
         databaseHelper = new DatabaseHelper(this);
 
         // Spinner element
-        Spinner spinner = bindingCandidate.signupCourseCandidate;
+        Spinner spinner = bindingCandidate.signupCityCandidate;
 
         // Spinner Drop down elements
-        String[] courses = new String[]{
-                "Faculty of Advanced Mathematics",
-                "Faculty of Advanced Physics",
-                "Faculty of Traditional Chinese Medicine",
-                "Faculty of Artificial Intelligence"
+        String[] cityy = new String[]{
+                "kairouan",
+                "tunis",
+                "sousse",
+                "sfax"
         };
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, courses);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, cityy);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -59,11 +59,11 @@ public class SignupActivity_candidate extends AppCompatActivity {
                 String name = bindingCandidate.signupNameCandidate.getText().toString();
                 String email = bindingCandidate.signupEmailCandidate.getText().toString();
                 String password = bindingCandidate.signupPasswordCandidate.getText().toString();
-                String course = bindingCandidate.signupCourseCandidate.getSelectedItem().toString(); // update here
+                String city = bindingCandidate.signupCityCandidate.getSelectedItem().toString(); // update here
                 String achievements = bindingCandidate.Achievements.getText().toString();
                 String manifesto = bindingCandidate.manifesto.getText().toString();
 
-                if (name.isEmpty() || email.isEmpty() || password.isEmpty() || achievements.isEmpty() || manifesto.isEmpty() || course.isEmpty()) {
+                if (name.isEmpty() || email.isEmpty() || password.isEmpty() || achievements.isEmpty() || manifesto.isEmpty() || city.isEmpty()) {
                     Toast.makeText(SignupActivity_candidate.this,"All fields are mandatory",Toast.LENGTH_SHORT).show();
                 }
                 else if (password.length() < 8) {
@@ -78,7 +78,7 @@ public class SignupActivity_candidate extends AppCompatActivity {
                     if (checkUserEmail) {
                         Toast.makeText(SignupActivity_candidate.this,"You have already registered",Toast.LENGTH_SHORT).show();
                     } else {
-                        Boolean insert = databaseHelper.insertCandidateData(email, password, name, course, achievements, manifesto);
+                        Boolean insert = databaseHelper.insertCandidateData(email, password, name,city, achievements, manifesto);
 
                         if (insert) {
                             Toast.makeText(SignupActivity_candidate.this,"Registration successful",Toast.LENGTH_SHORT).show();

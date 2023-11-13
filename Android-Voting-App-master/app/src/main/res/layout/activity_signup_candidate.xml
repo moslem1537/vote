@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/img_1"
-    tools:context=".SignupActivity_Student">
+    tools:context=".SignupActivity_Civilian">
 
 
     <LinearLayout
@@ -109,13 +109,13 @@
                 android:textColorHint="#686565" />
 
             <Spinner
-                android:id="@+id/signup_CourseCandidate"
+                android:id="@+id/signup_CityCandidate"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/lavender_border"
                 android:drawablePadding="8dp"
-                android:hint="Course"
+                android:hint="City"
                 android:paddingLeft="12dp"
                 android:textColorHint="#686565" />
 

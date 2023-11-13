@@ -44,9 +44,9 @@ public class CandidateAdapter extends RecyclerView.Adapter<CandidateViewHolder> 
         });
 
         holder.btnSelect.setOnClickListener(v -> {
-            String course = candidate.getCourse();
-            if (selectedCounts.containsKey(course) && selectedCounts.get(course) >= 3) {
-                Toast.makeText(context, "Cannot select more than 3 candidates from the same course.", Toast.LENGTH_SHORT).show();
+            String city = candidate.getCity();
+            if (selectedCounts.containsKey(city) && selectedCounts.get(city) >= 3) {
+                Toast.makeText(context, "Cannot select more than 3 candidates from the same city.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -56,9 +56,9 @@ public class CandidateAdapter extends RecyclerView.Adapter<CandidateViewHolder> 
             notifyItemRemoved(position);
             notifyItemRangeChanged(position, candidates.size());
 
-            // Increment the selected count for the course
-            int count = selectedCounts.containsKey(course) ? selectedCounts.get(course) : 0;
-            selectedCounts.put(course, count + 1);
+            // Increment the selected count for the city
+            int count = selectedCounts.containsKey(city) ? selectedCounts.get(city) : 0;
+            selectedCounts.put(city, count + 1);
 
             // Insert the selected candidate into the 'approved_candidates' table
             DatabaseHelper db = new DatabaseHelper(context);

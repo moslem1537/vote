@@ -12,14 +12,14 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/studentEmail"
+            android:id="@+id/civilianEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Student Email"
+            android:text="Civilian Email"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/studentlogoutButton"
+            android:id="@+id/civilianlogoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Logout"
@@ -34,7 +34,7 @@
         android:layout_marginTop="50dp">
 
         <Button
-            android:id="@+id/studentcandidateListButton"
+            android:id="@+id/civiliancandidateListButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:background="@drawable/logout"
@@ -48,7 +48,7 @@
 
 
         <Button
-            android:id="@+id/studentdashboardButton"
+            android:id="@+id/civiliandashboardButton"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:background="@drawable/logout"

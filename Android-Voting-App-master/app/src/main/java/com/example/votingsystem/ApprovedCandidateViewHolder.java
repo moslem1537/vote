@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ApprovedCandidateViewHolder extends RecyclerView.ViewHolder {
      TextView txtName;
-     TextView txtCourse;
+     TextView txtCity;
      TextView txtAchievements;
      TextView txtManifesto;
 
@@ -17,14 +17,14 @@ public class ApprovedCandidateViewHolder extends RecyclerView.ViewHolder {
     public ApprovedCandidateViewHolder(@NonNull View itemView) {
         super(itemView);
         txtName = itemView.findViewById(R.id.apName);
-        txtCourse = itemView.findViewById(R.id.apCourse);
+        txtCity = itemView.findViewById(R.id.apCity);
         txtAchievements = itemView.findViewById(R.id.apAchievements);
         txtManifesto = itemView.findViewById(R.id.apManifesto);
     }
 
     public void bind(ApprovedCandidate candidate) {
         txtName.setText(candidate.getName());
-        txtCourse.setText(candidate.getCourse());
+        txtCity.setText(candidate.getCity());
         txtAchievements.setText(candidate.getAchievements());
         txtManifesto.setText(candidate.getManifesto());
     }

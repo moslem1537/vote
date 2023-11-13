@@ -7,27 +7,27 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class StudentViewHolder extends RecyclerView.ViewHolder {
+public class CivilianViewHolder extends RecyclerView.ViewHolder {
     TextView txtName;
-    TextView txtCourse;
+    TextView txtCity;
     TextView txtAchievements;
     TextView txtManifesto;
     Button btnVote; // Add this line
 
-    public StudentViewHolder(@NonNull View itemView) {
+    public CivilianViewHolder(@NonNull View itemView) {
         super(itemView);
         txtName = itemView.findViewById(R.id.apName);
-        txtCourse = itemView.findViewById(R.id.apCourse);
+        txtCity = itemView.findViewById(R.id.apCity);
         txtAchievements = itemView.findViewById(R.id.apAchievements);
         txtManifesto = itemView.findViewById(R.id.apManifesto);
         btnVote = itemView.findViewById(R.id.btnVote); // Add this line
     }
 
-    public void bind(StudentCandidateList studentCandidate) {
-        txtName.setText(studentCandidate.getName());
-        txtCourse.setText(studentCandidate.getCourse());
-        txtAchievements.setText(studentCandidate.getAchievements());
-        txtManifesto.setText(studentCandidate.getManifesto());
+    public void bind(CivilianCandidateList civilianCandidate) {
+        txtName.setText(civilianCandidate.getName());
+        txtCity.setText(civilianCandidate.getCity());
+        txtAchievements.setText(civilianCandidate.getAchievements());
+        txtManifesto.setText(civilianCandidate.getManifesto());
     }
 }
 

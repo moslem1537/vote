@@ -1,14 +1,14 @@
 package com.example.votingsystem;
 
-public class StudentCandidateList {
+public class CivilianCandidateList {
     private final String name;
-    private final String course;
+    private final String city;
     private final String achievements;
     private final String manifesto;
 
-    public StudentCandidateList(String name, String course, String achievements, String manifesto) {
+    public CivilianCandidateList(String name, String city, String achievements, String manifesto) {
         this.name = name;
-        this.course = course;
+        this.city = city;
         this.achievements = achievements;
         this.manifesto = manifesto;
     }
@@ -17,8 +17,8 @@ public class StudentCandidateList {
         return name;
     }
 
-    public String getCourse() {
-        return course;
+    public String getCity() {
+        return city;
     }
 
     public String getAchievements() {
