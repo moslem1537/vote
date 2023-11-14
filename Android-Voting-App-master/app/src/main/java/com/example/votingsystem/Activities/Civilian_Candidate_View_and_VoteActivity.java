@@ -1,4 +1,4 @@
-package com.example.votingsystem;
+package com.example.votingsystem.Activities;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,6 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.example.votingsystem.CivilianAdapter;
+import com.example.votingsystem.CivilianCandidateList;
+import com.example.votingsystem.DatabaseHelper;
+import com.example.votingsystem.R;
+
 import java.util.List;
 
 public class Civilian_Candidate_View_and_VoteActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.votingsystem;
+package com.example.votingsystem.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.votingsystem.R;
 
 public class MainActivity extends AppCompatActivity {
 

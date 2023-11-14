@@ -9,8 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.votingsystem.Activities.LoginActivity;
 import com.example.votingsystem.databinding.ActivitySignupCivilianBinding;
-import android.view.View;
+
 import android.widget.ImageButton;
 import android.util.Patterns;
 

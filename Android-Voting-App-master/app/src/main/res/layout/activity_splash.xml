@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/img_1"
-    tools:context=".SplashActivity">
+    tools:context=".Activities.SplashActivity">
     <!-- Heading -->
     <TextView
         android:id="@+id/headingTextView"

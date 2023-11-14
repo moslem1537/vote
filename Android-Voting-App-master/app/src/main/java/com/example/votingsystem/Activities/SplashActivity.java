@@ -1,11 +1,13 @@
-package com.example.votingsystem;
+package com.example.votingsystem.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.votingsystem.R;
+
 public class SplashActivity extends AppCompatActivity {
     private static final long SPLASH_TIME_OUT = 5000;
     @Override

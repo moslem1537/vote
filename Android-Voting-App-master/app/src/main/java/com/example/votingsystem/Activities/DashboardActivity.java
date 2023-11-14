@@ -1,8 +1,11 @@
-package com.example.votingsystem;
+package com.example.votingsystem.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.graphics.Color;
+
+import com.example.votingsystem.DatabaseHelper;
+import com.example.votingsystem.R;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;

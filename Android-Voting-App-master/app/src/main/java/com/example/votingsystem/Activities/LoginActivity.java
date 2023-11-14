@@ -1,4 +1,4 @@
-package com.example.votingsystem;
+package com.example.votingsystem.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.Toast;
 import android.content.SharedPreferences;
 
+import com.example.votingsystem.DatabaseHelper;
+import com.example.votingsystem.R;
+import com.example.votingsystem.SignupActivity_Civilian;
 import com.example.votingsystem.databinding.ActivityLoginBinding;
-import com.example.votingsystem.databinding.ActivitySignupCivilianBinding;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
@@ -50,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                             editor.apply();
 
                             Toast.makeText(LoginActivity.this, "CivilianActivity login successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(),CivilianActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), CivilianActivity.class);
                             startActivity(intent);
                         }
                         else {

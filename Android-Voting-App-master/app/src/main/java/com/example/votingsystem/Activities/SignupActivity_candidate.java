@@ -1,4 +1,4 @@
-package com.example.votingsystem;
+package com.example.votingsystem.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.votingsystem.DatabaseHelper;
+import com.example.votingsystem.R;
 import com.example.votingsystem.databinding.ActivitySignupCandidateBinding;
-import android.view.View;
+
 import android.widget.ImageButton;
 public class SignupActivity_candidate extends AppCompatActivity {
 

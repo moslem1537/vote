@@ -1,4 +1,4 @@
-package com.example.votingsystem;
+package com.example.votingsystem.Activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,11 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.votingsystem.ApprovedCandidate;
+import com.example.votingsystem.ApprovedCandidateAdapter;
+import com.example.votingsystem.DatabaseHelper;
+import com.example.votingsystem.R;
 
 import java.util.List;
 

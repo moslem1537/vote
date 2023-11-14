@@ -6,14 +6,14 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher_tn_foreground"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_tn_foreground"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VotingSystem"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activities.SplashActivity"
             android:exported="true" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -22,36 +22,36 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".DashboardActivity"
+            android:name=".Activities.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".CivilianActivity"
+            android:name=".Activities.CivilianActivity"
             android:exported="false" />
         <activity
-            android:name=".Civilian_Candidate_View_and_VoteActivity"
+            android:name=".Activities.Civilian_Candidate_View_and_VoteActivity"
             android:exported="false" />
         <activity
-            android:name=".WaitingActivity_Candidate"
+            android:name=".Activities.WaitingActivity_Candidate"
             android:exported="false" />
         <activity
-            android:name=".ApprovedActivity_Candidate"
+            android:name=".Activities.ApprovedActivity_Candidate"
             android:label="Approved Candidates" />
         <activity
-            android:name=".AdminActivity"
+            android:name=".Activities.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".SignupActivity_candidate"
+            android:name=".Activities.SignupActivity_candidate"
             android:exported="false" />
         <activity
             android:name=".SignupActivity_Civilian"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="false" />
     </application>
 
